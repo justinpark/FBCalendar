@@ -1,0 +1,49 @@
+<html>
+<head>
+    <link rel="stylesheet" href="lib/jasmine/jasmine.css"/>
+
+    <script language="javascript" src="../lib/underscore-min.js"></script>
+    <!-- jasmine and sinon core files -->
+    <script type="text/javascript" src="lib/sinon/sinon.js"></script>
+    <script type="text/javascript" src="lib/jasmine/jasmine.js"></script>
+    <script type="text/javascript" src="lib/jasmine/jasmine-html.js"></script>
+    <script type="text/javascript" src="lib/jasmine-sinon/jasmine-sinon.js"></script>
+    <!--units-->
+    <script type="text/javascript" src="../src/data/FBEvent.js"></script>
+    <script type="text/javascript" src="src/data/FBEvent.js"></script>
+    <script type="text/javascript" src="../src/data/FBEventCollection.js"></script>
+    <script type="text/javascript" src="src/data/FBEventCollection.js"></script>
+    <script type="text/javascript" src="../src/data/FBEventTree.js"></script>
+    <script type="text/javascript" src="src/data/FBEventTree.js"></script>
+    <script type="text/javascript">
+        (function() {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+
+            var trivialReporter = new jasmine.TrivialReporter();
+
+            jasmineEnv.addReporter(trivialReporter);
+
+            jasmineEnv.specFilter = function(spec) {
+                return trivialReporter.specFilter(spec);
+            };
+
+            var currentWindowOnload = window.onload;
+
+            window.onload = function() {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+        })();
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>

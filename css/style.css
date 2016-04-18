@@ -1,0 +1,97 @@
+body, button, input, label, select, td, textarea {
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    font-size: 10px;
+}
+
+#container {
+    margin: 20px auto;
+    overflow: hidden;
+    width: 696px;
+    padding: 10px 0;
+}
+
+.times {
+    float: left;
+    width: 65px;
+    height: 730px;
+    list-style-type: none;
+    margin: -15px 10px 0 0;
+    padding: 0;
+    text-align: right;
+    color: #666666;
+    font-size: 13px;
+    position: relative;
+}
+
+.times > li {
+    height: 30px;
+    line-height: 30px;
+}
+
+.times small {
+    font-size: 10px;
+    color: #a6a6a6;
+    padding-left: 5px;
+}
+
+.events-wrapper {
+    border-left: 1px #d4d4d4 solid;
+    background-color: #ebebeb;
+    padding: 0 10px;
+    float: right;
+}
+
+#events-container {
+    width: 600px;
+    height: 720px;
+    position: relative;
+}
+
+.event {
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+
+    position: absolute;
+    overflow: auto;
+}
+
+.event dl {
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+
+    border:1px solid #d6d6d6;
+    background-color: #ffffff;
+    margin: 0;
+    height: 100%;
+    padding: 5px 15px;
+    overflow: auto;
+}
+
+.event:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 4px;
+    background-color: #4b6ea9;
+}
+
+.event dl > dt {
+    margin: 0;
+    padding: 0;
+    color: #4c6fa9;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.event dl > dd {
+    margin: 0;
+    padding: 0;
+    color: #797979;
+    font-size: 9px;
+}
